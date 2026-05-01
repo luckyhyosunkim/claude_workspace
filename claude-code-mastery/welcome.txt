@@ -1,1 +1,10 @@
 Hello, Terminal
+
+Homepage
+https://claude.com/product/claude-code
+
+Overview
+https://code.claude.com/docs/en/overview
+
+Pricing
+https://claude.com/pricing
