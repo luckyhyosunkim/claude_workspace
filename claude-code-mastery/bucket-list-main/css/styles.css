@@ -1,0 +1,311 @@
+/* Custom Styles (Tailwind CSS Complementary) */
+
+/* Background Gradient */
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%);
+    background-size: 400% 400%;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* Filter Button Styles */
+.filter-btn {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.filter-btn:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    transform: translateY(-2px);
+    border: 1px solid rgba(102, 126, 234, 0.3);
+}
+
+/* Bucket List Item Animation */
+.bucket-item {
+    animation: slideIn 0.3s ease-out;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+}
+
+.bucket-item:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.15) !important;
+    box-shadow: 0 8px 32px rgba(255, 255, 255, 0.1) !important;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Completed Item Styles */
+.bucket-item .line-through {
+    text-decoration: line-through;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Checkbox Hover Effect */
+.bucket-item button:first-child:hover {
+    transform: scale(1.1);
+}
+
+/* Enhanced Button Styles */
+button {
+    transition: all 0.3s ease;
+}
+
+button[type="submit"] {
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+button[type="submit"]:hover {
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+    transform: translateY(-2px);
+}
+
+button[type="submit"]:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+}
+
+/* Edit & Delete Buttons */
+.bucket-item button:nth-child(2),
+.bucket-item button:nth-child(3) {
+    transition: all 0.2s ease;
+    border-radius: 6px;
+    background-color: rgba(59, 130, 246, 0.3) !important;
+    color: white !important;
+    border: 1px solid rgba(59, 130, 246, 0.5);
+}
+
+.bucket-item button:nth-child(3) {
+    background-color: rgba(239, 68, 68, 0.3) !important;
+    border-color: rgba(239, 68, 68, 0.5);
+}
+
+.bucket-item button:nth-child(2):hover,
+.bucket-item button:nth-child(3):hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+    background-color: rgba(59, 130, 246, 0.5) !important;
+}
+
+.bucket-item button:nth-child(3):hover {
+    background-color: rgba(239, 68, 68, 0.5) !important;
+}
+
+/* Scrollbar Styles (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 640px) {
+    body {
+        padding: 1rem;
+    }
+
+    header {
+        margin-bottom: 1.5rem;
+    }
+
+    header h1 {
+        font-size: 1.75rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .bucket-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .bucket-item > div:last-child {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .filter-btn {
+        font-size: 0.875rem;
+        padding: 0.5rem 1rem;
+    }
+
+    #bucketForm {
+        flex-direction: column;
+    }
+
+    #bucketForm button {
+        width: 100%;
+    }
+}
+
+/* Input Field Focus Effect */
+input:focus {
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Button Click Effect */
+button:active {
+    transform: scale(0.98);
+}
+
+/* Empty State Message Animation */
+#emptyState {
+    animation: fadeIn 0.5s ease-in;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Card Styles */
+.bg-white {
+    background: transparent !important;
+    border: none;
+}
+
+/* Header Style */
+header {
+    margin-bottom: 2.5rem;
+    animation: fadeInDown 0.6s ease-out;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: white;
+    letter-spacing: -1px;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: white;
+    opacity: 0.9;
+    margin-top: 0.5rem;
+}
+
+/* Statistics Section */
+#totalCount, #completedCount, #progressCount, #completionRate {
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+
+/* Input Form Section */
+#bucketForm {
+    gap: 0.75rem;
+}
+
+#bucketInput {
+    transition: all 0.3s ease;
+}
+
+#bucketInput:focus {
+    box-shadow: 0 4px 16px rgba(102, 126, 234, 0.4);
+    transform: translateY(-1px);
+    background: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Modal Backdrop Animation */
+#editModal {
+    animation: fadeIn 0.2s ease-in;
+    backdrop-filter: blur(8px);
+}
+
+#editModal > div {
+    animation: scaleIn 0.2s ease-out;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* 통계 숫자 애니메이션 */
+#totalCount, #completedCount, #progressCount, #completionRate {
+    transition: all 0.3s ease;
+}
+
+/* Dark Mode Support (Optional) */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: linear-gradient(135deg, #0f0f23 0%, #1a0f35 25%, #1f0f3d 50%, #1a0f35 75%, #0f0f23 100%);
+        background-size: 400% 400%;
+        background-attachment: fixed;
+    }
+
+    .text-white {
+        color: #f3f4f6;
+    }
+
+    #editModal > div h3 {
+        color: #f3f4f6;
+    }
+}

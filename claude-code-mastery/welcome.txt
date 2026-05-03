@@ -8,3 +8,7 @@ https://code.claude.com/docs/en/overview
 
 Pricing
 https://claude.com/pricing
+
+Project init
+https://gymcoding.notion.site/init-24c6a10d310b806293f5cd5fa00c4eea
+: The `CLAUDE.md` file serves as the memory for Claude Code, containing guidelines for project structure, tech stack, and development conventions to support consistent development.
